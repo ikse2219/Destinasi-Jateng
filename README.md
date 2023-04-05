@@ -5,3 +5,5 @@ Project Aplikasi Mobile mata pengembangan aplikasi mobile
 Project ini menggunakan flutter sebagai teknologi utama pengembangan aplikasi
 
 tambahan
+
+Cek sync
