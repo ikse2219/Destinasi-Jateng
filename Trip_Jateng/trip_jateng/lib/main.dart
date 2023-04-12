@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trip_jateng/ui/widget/trip.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 void main() {
   runApp(const MyApp());
 }
