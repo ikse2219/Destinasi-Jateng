@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:trip_jateng/ui/widget/best.dart';
-import 'package:trip_jateng/ui/widget/bottomNav.dart';
-import 'package:trip_jateng/ui/widget/box_kategori.dart';
-import 'package:trip_jateng/ui/widget/awal.dart';
+import 'package:trip_jateng/beranda/sidebar.dart';
+import 'package:trip_jateng/cari/cari.dart';
+import 'package:trip_jateng/beranda/best.dart';
+import 'package:trip_jateng/beranda/category.dart';
+import 'package:trip_jateng/beranda/awal.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:trip_jateng/list/ListPantai.dart';
+import 'package:trip_jateng/text/text2.dart';
+
+import 'package:trip_jateng/text/text.dart';
 
 class Trip extends StatefulWidget {
   const Trip({super.key});
@@ -25,17 +30,27 @@ class _MyWidgetState extends State<Trip> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideBar(),
+      appBar: AppBar(),
       body: Column(
         children: <Widget>[
           BoxAwal(judul: ""),
           SizedBox(
-            height: 50,
+            height: 15,
+          ),
+          Box(),
+          SizedBox(
+            height: 15,
           ),
           BoxKategori(box: ""),
           SizedBox(
-            height: 75,
+            height: 40,
           ),
-          Best(best: "")
+          Fav(),
+          SizedBox(
+            height: 15,
+          ),
+          Best(best: ""),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -50,17 +65,27 @@ class _MyWidgetState extends State<Trip> {
         selectedLabelStyle: TextStyle(),
         unselectedFontSize: 13,
         iconSize: 30,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Beranda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: InkWell(
+                onTap: (() {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Coba()));
+                }),
+                child: Icon(Icons.favorite)),
             label: 'Favorit',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: InkWell(
+                onTap: (() {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Cari()));
+                }),
+                child: Icon(Icons.search)),
             label: 'Cari',
           ),
         ],

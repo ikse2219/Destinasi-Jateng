@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:trip_jateng/ui/widget/trip.dart';
+import 'package:trip_jateng/beranda/trip.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:trip_jateng/repository.dart';
+
+import 'model.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -30,3 +34,5 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+ 

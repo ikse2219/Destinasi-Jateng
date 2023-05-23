@@ -21,8 +21,8 @@ class BoxAwal extends StatelessWidget {
             width: double.infinity,
             height: 200,
             color: Colors.blueGrey,
-            child: Image.network(
-              'https://i.redd.it/jj8md0ec2el21.jpg',
+            child: Image.asset(
+              'assets/sewu.jpg',
               fit: BoxFit.cover,
             ),
           ),

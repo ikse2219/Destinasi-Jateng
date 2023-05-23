@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_image_slideshow: any
+  http: ^0.13.6
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -67,6 +68,13 @@ flutter:
    - assets/pantai.jpg
    - assets/kuil.png
    - assets/gunung.jpg
+   - assets/sewu.jpg
+   - assets/jateng.png
+   - assets/patung.png
+   - assets/baru.jpeg
+   - assets/boro.jpg
+   - assets/tengah.png
+   - assets/nih.jpeg
 
   
 
