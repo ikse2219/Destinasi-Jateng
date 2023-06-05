@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:trip_jateng/list/ListKuil.dart';
-import 'package:trip_jateng/list/ListMount.dart';
+import 'package:trip_jateng/list/ListGunung.dart';
 import 'package:trip_jateng/beranda/best.dart';
 import 'package:trip_jateng/list/listPantai.dart';
 
@@ -37,7 +37,7 @@ class BoxKategori extends StatelessWidget {
             InkWell(
               onTap: (() {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ListMount()));
+                    MaterialPageRoute(builder: (context) => ListGunung()));
               }),
               child: Image.asset(
                 'assets/gunung.jpg',
